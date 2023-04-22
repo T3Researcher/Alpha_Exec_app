@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Assignments</title>
+</head>
+<body>
+    <h1>Canvas Assignments</h1>
+    <ul>
+        {% for assignment in assignments %}
+            <li>
+                {{ assignment.name }} - Due: {{ assignment.due_at }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('canvas_courses') }}">Back to courses</a>
+</body>
+</html>
